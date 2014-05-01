@@ -12,7 +12,6 @@ keywords:
   - grunt
   - bower
   - phantomjs
-  - karma
   - node-webkit
   - makensis
   - nsis
