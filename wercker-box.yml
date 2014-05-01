@@ -1,5 +1,5 @@
 name: node-webkit
-version: 0.0.1
+version: 0.1.0
 inherits: wercker/ubuntu12.04-nodejs0.10@1.0.6
 type: main
 platform: ubuntu@12.04
@@ -29,10 +29,22 @@ script: |
 
   sudo apt-get install nsis
 
+  mkdir ~/osslsigncode
+  cd ~/osslsigncode
+
+
+  sudo apt-get install libcurl4-gnutls-dev
+
+  curl -L http://sourceforge.net/projects/osslsigncode/files/osslsigncode/osslsigncode-1.6.tar.gz/download -o osslsigncode.tar.gz
+  tar -zxvf osslsigncode.tar.gz
+  cd osslsigncode-1.6/
+  ./configure && make
+  sudo make install
+
   node --version
 
-  npm ls -g grep | bower
-  npm ls -g grep | grunt-cli
+  npm ls -g | grep bower
+  npm ls -g | grep grunt-cli
 
   echo NSIS
   makensis -VERSION
