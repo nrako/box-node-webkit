@@ -7,6 +7,7 @@ description: "Wercker box with the essentials to test and build a node-webkit ap
 packages:
   - phantomjs@1.9.2
   - nsis
+  - osslsigncode@1.6.0
 keywords:
   - nodejs
   - grunt
@@ -15,6 +16,7 @@ keywords:
   - node-webkit
   - makensis
   - nsis
+  - osslsigncode
 script: |
   sudo apt-get update
 
