@@ -1,0 +1,31 @@
+name: node-webkit
+version: 0.0.1
+inherits: wercker/default@0.0.1
+type: main
+platform: ubuntu@12.04
+description: "Wercker box with the essentials to test and build a node-webkit app."
+packages:
+  - phantomjs@1.9.2
+  - nsis
+keywords:
+  - nodejs
+  - grunt
+  - bower
+  - phantomjs
+  - karma
+  - node-webkit
+  - makensis
+  - nsis
+script: |
+  sudo apt-get update
+
+  # npm globals, so you dont need to change the package.json
+  sudo npm install -g bower grunt-cli
+
+  # phantomjs
+  export PHANTOM_VERSION=1.9.2
+  wget https://phantomjs.googlecode.com/files/phantomjs-$PHANTOM_VERSION-linux-x86_64.tar.bz2
+  tar xfj phantomjs-$PHANTOM_VERSION-linux-x86_64.tar.bz2
+  sudo cp phantomjs-$PHANTOM_VERSION-linux-x86_64/bin/phantomjs /usr/local/bin
+
+  sudo apt-get install nsis
