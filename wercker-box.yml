@@ -1,6 +1,6 @@
 name: node-webkit
 version: 0.0.1
-inherits: wercker/default@0.0.1
+inherits: wercker/ubuntu12.04-nodejs0.10@1.0.6
 type: main
 platform: ubuntu@12.04
 description: "Wercker box with the essentials to test and build a node-webkit app."
