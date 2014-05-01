@@ -28,3 +28,11 @@ script: |
   sudo cp phantomjs-$PHANTOM_VERSION-linux-x86_64/bin/phantomjs /usr/local/bin
 
   sudo apt-get install nsis
+
+  node --version
+
+  npm ls -g grep | bower
+  npm ls -g grep | grunt-cli
+
+  echo NSIS
+  makensis -VERSION
