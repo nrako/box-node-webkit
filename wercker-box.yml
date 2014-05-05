@@ -1,5 +1,5 @@
 name: node-webkit
-version: 0.2.0
+version: 0.3.0
 inherits: wercker/ubuntu12.04-nodejs0.10@1.0.6
 type: main
 platform: ubuntu@12.04
@@ -29,7 +29,8 @@ script: |
   tar xfj phantomjs-$PHANTOM_VERSION-linux-x86_64.tar.bz2
   sudo cp phantomjs-$PHANTOM_VERSION-linux-x86_64/bin/phantomjs /usr/local/bin
 
-  sudo apt-get install nsis
+  # for makennsis and mkfs.hfsplus commands to build win.exe and dmg installer
+  sudo apt-get install nsis hfsprogs
 
   mkdir ~/osslsigncode
   cd ~/osslsigncode
