@@ -21,7 +21,7 @@ script: |
   sudo apt-get update
 
   # npm globals, so you dont need to change the package.json
-  sudo npm install -g bower grunt-cli
+  sudo npm install -g bower grunt-cli underscore-cli
 
   # phantomjs
   export PHANTOM_VERSION=1.9.2
