@@ -29,8 +29,8 @@ script: |
   tar xfj phantomjs-$PHANTOM_VERSION-linux-x86_64.tar.bz2
   sudo cp phantomjs-$PHANTOM_VERSION-linux-x86_64/bin/phantomjs /usr/local/bin
 
-  # for makennsis and mkfs.hfsplus commands to build win.exe and dmg installer
-  sudo apt-get install nsis hfsprogs
+  # add nsis to build windows install executable
+  sudo apt-get install nsis
 
   mkdir ~/osslsigncode
   cd ~/osslsigncode
