@@ -5,6 +5,8 @@ node-webkit Wercker Box
 
 Wercker box with the essentials to test and build a node-webkit app.
 
+Link to the [node-webkit box on wercker](https://app.wercker.com/#search/boxes/node-webkit).
+
 # License
 
 The MIT License (MIT)
