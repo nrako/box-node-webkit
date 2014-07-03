@@ -46,6 +46,12 @@ script: |
   ./configure && make
   sudo make install
 
+  # Install wine
+  sudo add-apt-repository ppa:ubuntu-wine/ppa -y
+  sudo sed -i 's/main/main universe/' /etc/apt/sources.list
+  sudo apt-get update
+  sudo apt-get install wine1.7 winetricks -y
+
   node --version
 
   npm ls -g | grep bower
@@ -54,8 +60,4 @@ script: |
   echo NSIS
   makensis -VERSION
 
-  # Install wine
-  sudo add-apt-repository ppa:ubuntu-wine/ppa -y
-  sudo sed -i 's/main/main universe/' /etc/apt/sources.list
-  sudo apt-get update
-  sudo apt-get install wine1.7 winetricks -y
+  wine --version
