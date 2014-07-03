@@ -1,5 +1,5 @@
 name: node-webkit
-version: 0.3.0
+version: 0.4.0
 inherits: wercker/ubuntu12.04-nodejs0.10@1.0.6
 type: main
 platform: ubuntu@12.04
@@ -8,6 +8,7 @@ packages:
   - phantomjs@1.9.2
   - nsis
   - osslsigncode@1.6.0
+  - wine@1.7
 keywords:
   - nodejs
   - grunt
@@ -17,6 +18,7 @@ keywords:
   - makensis
   - nsis
   - osslsigncode
+  - wine
 script: |
   sudo apt-get update
 
@@ -51,3 +53,9 @@ script: |
 
   echo NSIS
   makensis -VERSION
+
+  # Install wine
+  sudo add-apt-repository ppa:ubuntu-wine/ppa -y
+  sudo sed -i 's/main/main universe/' /etc/apt/sources.list
+  sudo apt-get update
+  sudo apt-get install wine1.7 winetricks -y
