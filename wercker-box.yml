@@ -1,5 +1,5 @@
 name: node-webkit
-version: 0.4.0
+version: 0.5.0
 inherits: wercker/ubuntu12.04-nodejs0.10@1.0.6
 type: main
 platform: ubuntu@12.04
