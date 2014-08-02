@@ -7,7 +7,7 @@ description: "Wercker box with the essentials to test and build a node-webkit ap
 packages:
   - phantomjs@1.9.7
   - nsis
-  - osslsigncode@1.6.0
+  - osslsigncode@1.7.1
   - wine@1.7
 keywords:
   - nodejs
@@ -40,9 +40,9 @@ script: |
 
   sudo apt-get install libcurl4-gnutls-dev
 
-  curl -L http://sourceforge.net/projects/osslsigncode/files/osslsigncode/osslsigncode-1.6.tar.gz/download -o osslsigncode.tar.gz
+  curl -L http://sourceforge.net/projects/osslsigncode/files/osslsigncode/osslsigncode-1.7.1.tar.gz/download -o osslsigncode.tar.gz
   tar -zxvf osslsigncode.tar.gz
-  cd osslsigncode-1.6/
+  cd osslsigncode-1.7.1/
   ./configure && make
   sudo make install
 
