@@ -5,7 +5,7 @@ type: main
 platform: ubuntu@12.04
 description: "Wercker box with the essentials to test and build a node-webkit app."
 packages:
-  - phantomjs@1.9.2
+  - phantomjs@1.9.7
   - nsis
   - osslsigncode@1.6.0
   - wine@1.7
@@ -26,7 +26,7 @@ script: |
   sudo npm install -g bower grunt-cli underscore-cli
 
   # phantomjs
-  export PHANTOM_VERSION=1.9.2
+  export PHANTOM_VERSION=1.9.7
   wget https://phantomjs.googlecode.com/files/phantomjs-$PHANTOM_VERSION-linux-x86_64.tar.bz2
   tar xfj phantomjs-$PHANTOM_VERSION-linux-x86_64.tar.bz2
   sudo cp phantomjs-$PHANTOM_VERSION-linux-x86_64/bin/phantomjs /usr/local/bin
