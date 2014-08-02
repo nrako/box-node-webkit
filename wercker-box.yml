@@ -34,6 +34,9 @@ script: |
   # add nsis to build windows install executable
   sudo apt-get install nsis
 
+  # add autoconf for osslsigncode
+  sudo apt-get install autoconf
+
   mkdir ~/osslsigncode
   cd ~/osslsigncode
 
